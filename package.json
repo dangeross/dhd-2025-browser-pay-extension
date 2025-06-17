@@ -1,0 +1,37 @@
+{
+  "name": "dhd-2025-browser-pay-extension",
+  "version": "1.0.0",
+  "description": "Chrome extension with Breez SDK integration",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dangeross/dhd-2025-browser-pay-extension.git"
+  },
+  "keywords": [
+    "chrome-extension",
+    "breez-sdk",
+    "wasm",
+    "lightning"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dangeross/dhd-2025-browser-pay-extension/issues"
+  },
+  "homepage": "https://github.com/dangeross/dhd-2025-browser-pay-extension#readme",
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.23",
+    "@types/chrome": "^0.0.260",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.4"
+  },
+  "dependencies": {
+    "@breeztech/breez-sdk-liquid": "^0.9.1"
+  }
+}

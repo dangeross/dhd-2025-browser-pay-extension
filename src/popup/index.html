@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browser Pay Extension</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Browser Pay Extension</h1>
+        
+    <!-- Mnemonic input form - will be shown only if no mnemonic is set -->
+    <div id="mnemonic-form" class="mnemonic-form hidden">
+      <h2>Enter Mnemonic</h2>
+      <p class="description">Please enter your 12-word BIP39 mnemonic seed phrase to initialize the wallet:</p>
+      <textarea id="mnemonic-input" placeholder="Enter your 12-word mnemonic phrase here..."></textarea>
+      <div class="mnemonic-actions">
+        <button id="save-mnemonic" class="primary-button">Set Mnemonic</button>
+        <div id="mnemonic-error" class="error-message hidden"></div>
+      </div>
+    </div>
+    
+    <!-- This section will be shown only when mnemonic is set -->
+    <div id="wallet-section" class="wallet-section hidden">
+      <div class="actions">
+        <button id="show-settings" class="secondary-button">Settings</button>
+      </div>
+    </div>
+    
+    <!-- Settings section -->
+    <div id="settings-section" class="settings-section hidden">
+      <h2>Settings</h2>
+      <div class="settings-content">
+        <div class="setting-group">
+          <h3>Mnemonic</h3>
+          <p class="description">Warning: Resetting your mnemonic will disconnect the SDK and require re-initialization.</p>
+          <button id="reset-mnemonic" class="danger-button">Reset Mnemonic</button>
+        </div>
+      </div>
+      <div class="settings-actions">
+        <button id="back-to-wallet" class="secondary-button">Back</button>
+      </div>
+      <div id="settings-message" class="message hidden"></div>
+    </div>
+  </div>
+  <script type="module" src="./index.ts"></script>
+</body>
+</html>
